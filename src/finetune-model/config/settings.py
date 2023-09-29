@@ -11,7 +11,7 @@ from pydantic import BaseSettings
 
 class Settings(BaseSettings):
     LLM_NAME: str = "openai_chat"
-    DB_LOCATION: str = "../data"
+    DB_LOCATION: str = "./data"
     pass
 
 

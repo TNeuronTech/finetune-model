@@ -69,6 +69,7 @@ class Clean(distutils.command.clean.clean):
 
         # Remove build directory
         build_dirs = [
+            ROOT_DIR / "dist",  # Remove dist
             ROOT_DIR / "build",  # Remove build
             ROOT_DIR / "finetune_model.egg-info",
             

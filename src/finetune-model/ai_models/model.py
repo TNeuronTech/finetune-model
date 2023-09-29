@@ -6,12 +6,15 @@ from langchain.chains import RetrievalQA
 
 from config.settings import settings
 
+import os
+
 class Model:
     def __init__(self) -> None:
         # print(settings.LLM_NAME)
         self.textSplitter = RecursiveCharacterTextSplitter(chunk_size=2000, chunk_overlap=0)
         self.embeddings = OpenAIEmbeddings()
         
+        print(os.getcwd())
         index = Chroma(persist_directory=settings.DB_LOCATION, embedding_function=self.embeddings)
         self.retrieval = RetrievalQA.from_chain_type(llm=OpenAI(), chain_type="stuff", retriever=index.as_retriever())
 
@@ -20,6 +23,6 @@ class Model:
     def get_query_results(self, prompt) -> str:
         return self.retrieval.run(prompt)
 
-
+ai_model = Model()
 
 

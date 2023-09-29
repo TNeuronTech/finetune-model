@@ -1,0 +1,7 @@
+recursive-include src *
+
+include LICENSE.txt
+include README.md
+include requirements.txt
+include setup.py
+include version.txt
