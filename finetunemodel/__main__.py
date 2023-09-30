@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from fastapi import FastAPI
-from finetunemodel.router import ai_model
+from finetunemodel.router import modelrouter
 import os
 
 
@@ -19,7 +19,7 @@ app = FastAPI(
     version="1.0.0",
 )
 
-app.include_router(ai_model.router)
+app.include_router(modelrouter.router)
 
 if __name__ == "__main__":  
      uvicorn.run(app, host="0.0.0.0", port=8000)
