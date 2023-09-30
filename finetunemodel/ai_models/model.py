@@ -4,7 +4,7 @@ from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import Chroma
 from langchain.chains import RetrievalQA
 
-from config.settings import settings
+from finetunemodel.config.settings import settings
 
 import os
 

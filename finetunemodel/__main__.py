@@ -1,8 +1,9 @@
+import uvicorn
 from dotenv import load_dotenv
 load_dotenv()
 
 from fastapi import FastAPI
-from router import ai_model
+from finetunemodel.router import ai_model
 import os
 
 
@@ -20,5 +21,5 @@ app = FastAPI(
 
 app.include_router(ai_model.router)
 
-# print(model.get_query_results("Summarize this content in 5 points"))
-
+if __name__ == "__main__":  
+     uvicorn.run(app, host="0.0.0.0", port=8000)

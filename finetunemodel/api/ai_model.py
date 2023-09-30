@@ -1,7 +1,7 @@
 
-from schema import schemas
+from finetunemodel.schema import schemas
 
-from ai_models.model import ai_model
+from finetunemodel.ai_models.model import ai_model
 
 
 def query_model(request: schemas.PredictReq):

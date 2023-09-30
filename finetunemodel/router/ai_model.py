@@ -1,6 +1,6 @@
 from fastapi import APIRouter, status
-from schema import schemas
-from api import ai_model
+from finetunemodel.schema import schemas
+from finetunemodel.api import ai_model
 
 router = APIRouter(tags=["AI-Model"], prefix="/model")
 
