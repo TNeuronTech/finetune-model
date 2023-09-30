@@ -3,9 +3,9 @@ requires = ["setuptools>=68.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "finetune-model"
+name = "finetunemodel"
 authors = [
-    {name = "finetune-model", email = "tneurontech@gmail.com"},
+    {name = "finetunemodel", email = "tneurontech@gmail.com"},
 ]
 description = "Finetune model based on user data."
 readme = "README.md"

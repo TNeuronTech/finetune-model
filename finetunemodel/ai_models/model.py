@@ -14,7 +14,6 @@ class Model:
         self.textSplitter = RecursiveCharacterTextSplitter(chunk_size=2000, chunk_overlap=0)
         self.embeddings = OpenAIEmbeddings()
         
-        print(os.getcwd())
         index = Chroma(persist_directory=settings.DB_LOCATION, embedding_function=self.embeddings)
         self.retrieval = RetrievalQA.from_chain_type(llm=OpenAI(), chain_type="stuff", retriever=index.as_retriever())
 
